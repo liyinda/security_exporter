@@ -132,8 +132,10 @@ func (c *SecurityManager) SecurityState() (
     reverseCountByHost map[string]int, failpasswdCountByHost map[string]int,  fschangeCountByHost map[string]int,
 ) {
     // Just example fake data.
+    var shellsum int
+    shellsum = reverseShell("sh\n") + reverseShell("py\n")
     reverseCountByHost = map[string]int{
-        getHostname(): reverseShell("sh\n"),
+        getHostname(): shellsum,
     }
     failpasswdCountByHost = map[string]int{
         //"bar.example.org": 2001,
