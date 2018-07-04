@@ -67,10 +67,13 @@ Documents about exposed Prometheus metrics.
 ``` 
 # HELP fail_password_total Number of Fail Password in /var/log/secure.
 # TYPE fail_password_total counter
-fail_password_total{host="$hostname",zone="$zone"} 0
+fail_password_total{host="$hostname",zone="datacenter"} 3
+# HELP file_change_total Number of Change in /etc.
+# TYPE file_change_total counter
+file_change_total{host="$hostname",zone="datacenter"} 21
 # HELP reverse_shell_total Number of Reverse Shell.
 # TYPE reverse_shell_total counter
-reverse_shell_total{host="$hostname",zone="$zone"} 0
+reverse_shell_total{host="$hostname",zone="datacenter"} 0
 
 ```
 
