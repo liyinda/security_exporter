@@ -89,6 +89,12 @@ func fsnotifyInit(){
         "/usr/sbin",
         "/usr/bin",
     }
+    //判断文件是否存在并创建
+    _, err := os.Stat("/tmp/fsnotify.log")
+    if os.IsNotExist(err) {
+        file,_:= os.Create("/tmp/fsnotify.log")
+        defer file.Close()
+    }
 
     watcher, err := fsnotify.NewWatcher()
     if err != nil {
