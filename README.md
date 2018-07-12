@@ -79,6 +79,6 @@ reverse_shell_total{host="$hostname",zone="datacenter"} 0
 
 ### Grafana
 
-![image](https://github.com/liyinda/security_exporter/jpg/grafana.jpg)
+![image](https://github.com/liyinda/security_exporter/blob/master/jpg/grafana.jpg)
 
 
